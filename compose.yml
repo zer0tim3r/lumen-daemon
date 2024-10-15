@@ -1,0 +1,10 @@
+services:
+  app:
+    image: alpine:latest
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - ./app:/app
+    ports:
+      - "1234:1234"
+    entrypoint: /app/start.sh
